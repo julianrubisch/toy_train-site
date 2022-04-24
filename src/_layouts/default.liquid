@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="{{ site.locale }}">
+  <head>
+    {% render "head", metadata: site.metadata, title: page.title %}
+  </head>
+  <body class="{{ resource.data.layout }} {{ resource.data.page_class }} bg-amber-100 max-w-7xl mx-auto sm:px-6 lg:px-8">
+    {% comment %}
+    {% render "navbar", metadata: site.metadata, resource: resource %}
+    {% endcomment %}
+
+    <main class="flex justify-center max-h-screen">
+      <img class="object-contain" alt="ToyTrain Teaser" src="/images/toy_train_teaser.png"/> 
+      {{ content }}
+    </main>
+
+    {% comment %}
+    {% render "footer", metadata: site.metadata %}
+    {% endcomment %}
+  </body>
+</html>
